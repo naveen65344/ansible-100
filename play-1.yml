@@ -1,5 +1,5 @@
 - name: installing ansible serevesr
   hosts: web
   tasks:
-  - name: installing
-    ansible.builtin.msg
+   - name: installing
+     ansible.builtin.msg
