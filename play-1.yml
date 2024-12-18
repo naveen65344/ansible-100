@@ -1,12 +1,12 @@
+---
 - name: adding user
   hosts: web
   become: yes
   tasks:
-   - name: user
-     ansible.builtin.command: id expense
+    - name: check if user "expense" exists
+      ansible.builtin.command: id expense
       register: user
 
-   - name: printing
-     ansible.builtin.debug:
-      msg: {{user}}
-        
+    - name: print user details
+      ansible.builtin.debug:
+        msg: "{{ user }}"
