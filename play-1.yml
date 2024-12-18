@@ -6,7 +6,7 @@
   tasks:
    - name: installing
      ansible.builtin.debug:
-       msg: "hi {{devops}}"
+       msg: "hi {{course}}"
 
 
 
