@@ -1,16 +1,6 @@
-
-- name: installing nginx server
+- name: adding user
   hosts: web
   become: yes
-  gather_facts: yes
   tasks:
-    - name: installing nginx server
-      ansible.builtin.package:
-        name: nginx
-        state: present
-        
-
-    - name: starting nginx service
-      ansible.builtin.service:
-        name: nginx
-        state: started
+   - name: user
+     ansible.builtin.command: id expense
