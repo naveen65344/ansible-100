@@ -1,4 +1,4 @@
----
+
 - name: installing nginx server
   hosts: web
   become: yes
