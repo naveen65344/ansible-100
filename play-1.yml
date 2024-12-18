@@ -9,6 +9,3 @@
         state: present
       when: ansible_os_family="REDHAT"   
 
-    - name: print user details
-      ansible.builtin.debug:
-        msg: "{{ user }}"
