@@ -2,6 +2,7 @@
 - name: installing nginx server
   hosts: web
   become: yes
+  gather_facts: yes
   tasks:
     - name: installing nginx server
       ansible.builtin.package:
