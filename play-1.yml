@@ -5,7 +5,7 @@
   become: yes
   
   tasks:
-    - name: insall
+    - name: install
       ansible.builtin.package:
         name: nginx
         state: present
