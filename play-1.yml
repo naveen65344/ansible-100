@@ -1,6 +1,7 @@
 - name: debug module
   hosts: web
-  vars:
+  vars_files:
+   - vars.yml
     course: devops
   become: yes
   tasks:
