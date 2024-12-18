@@ -1,6 +1,7 @@
 ---
 - name: adding user
   hosts: web
+  gather_facts: no
   become: yes
   gather_facts: yes
   tasks:
