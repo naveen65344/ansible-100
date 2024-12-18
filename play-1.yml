@@ -1,4 +1,4 @@
-- name: 
+- name: debug module
   hosts: web
   tasks:
    - name: installing
