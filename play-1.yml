@@ -3,10 +3,11 @@
   hosts: web
   become: yes
   tasks:
-    - name: check if user "expense" exists
-      ansible.builtin.command: id expense
-      register: user
-      ignore_errors: yes
+    - name: install nginx if it is redhat
+      ansible.builtin.dnf
+        name: nginx
+        state: present
+      when: ansible_os_family="REDHAT"   
 
     - name: print user details
       ansible.builtin.debug:
