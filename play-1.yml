@@ -1,14 +1,9 @@
-
-
-
 - name: printing variables
   hosts: web
   vars_files:
-   - nav.yml
-  
+    - nav.yml           # Load variables from nav.yml file
   become: yes
   tasks:
     - name: printing variable
       ansible.builtin.debug:
-        msg: "hi {{ course }}"   # Print the value of the variable "name1"
-       
+        msg: "hi {{ course }}"   # Print the value of the variable "course"
