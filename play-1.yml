@@ -1,5 +1,6 @@
 - name: installing nginx
   hosts: web
+  become: yes
   tasks:
    - name: installing nginx server
      ansible.builtin.package:
