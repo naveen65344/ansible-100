@@ -1,9 +1,9 @@
 - name: installing nginx
   hosts: web
   vars:
-    name: naveen
+    name1: naveen
   become: yes
   tasks:
    - name: installing nginx server
      ansible.builtin.package:
-       msg: "hi {{name}}"        
+       msg: "hi {{name1}}"        
