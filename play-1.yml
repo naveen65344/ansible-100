@@ -1,8 +1,8 @@
 - name: printing variables
   hosts: web
   vars_prompt:
-    - name1: naveen
-      msg: "enter name1"
+    - name1: "name1"
+      prompt: "enter name1"
   become: yes
   tasks:
     - name: printing variable
