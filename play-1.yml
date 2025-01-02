@@ -1,12 +1,9 @@
 - name: installing nginx
   hosts: web
+  vars:
+    name: naveen
   become: yes
   tasks:
    - name: installing nginx server
      ansible.builtin.package:
-        name: nginx
-        state: present  
-   - name: starting service
-     ansible.builtin.service:
-       name: nginx
-       state: started             
+       msg: "hi {{name}}"        
