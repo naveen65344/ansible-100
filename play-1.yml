@@ -1,6 +1,6 @@
 - name: printing variables
   hosts: web
-  vars_prompt
+  vars_prompt:
     - name1: naveen
       msg: "enter name1"
   become: yes
