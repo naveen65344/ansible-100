@@ -1,9 +1,10 @@
 - name: printing variables
   hosts: web
-  vars_files:
-    - nav.yml           # Load variables from nav.yml file
+  vars:
+    num1: 10
   become: yes
   tasks:
     - name: printing variable
       ansible.builtin.debug:
-        msg: "hi {{ course }}"   # Print the value of the variable "course"
+        msg: "hi {{ num1}} is greater than 5"
+      when: num1<5  
