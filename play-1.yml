@@ -3,7 +3,7 @@
   tasks:
    - name: names
      ansible.buitin.debug:
-       msg: "{{item}}""
+       msg: "{{item}}"
      loop:
       - naveen
       - rajesh  
