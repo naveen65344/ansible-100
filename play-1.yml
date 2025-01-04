@@ -1,10 +1,11 @@
 - name: printing variables
   hosts: web
-  vars:
-    num1: 10
+  vars_prompt:
+    - name: num1
+      prompt: "enter a number"
   become: yes
   tasks:
     - name: printing variable
       ansible.builtin.debug:
         msg: "hi {{ num1}} is greater than 5"
-      when: num1<5  
+      when: num1 | int <5  
