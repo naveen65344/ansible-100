@@ -13,7 +13,7 @@
      when: ansible_os_family=="RedHat"
 
    - name: ansible to install  package in ubuntu
-   ansible.builtin.apt:
-     name: docker
-     state: present
-   when: ansible_os_family=="ubuntu"  
+     ansible.builtin.apt:
+      name: docker
+      state: present
+     when: ansible_os_family=="ubuntu"  
