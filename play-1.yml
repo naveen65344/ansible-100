@@ -2,7 +2,7 @@
   hosts: web
   tasks:
    - name: configuring names
-     ansible.buitin.debug:
+     ansible.builtin.debug:
        msg: "{{item}}"
      loop:
       - naveen
