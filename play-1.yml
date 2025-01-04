@@ -8,4 +8,4 @@
     - name: printing variable
       ansible.builtin.debug:
         msg: "hi {{ num1}} is greater than 5"
-      when: num1 | int <5  
+      when: num1 | int >5  
