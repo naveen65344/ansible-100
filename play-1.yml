@@ -1,11 +1,12 @@
 - name: printing variables
   hosts: web
-  vars_prompt:
-    - name: num1
-      prompt: "enter a number"
   become: yes
   tasks:
-    - name: printing variable
-      ansible.builtin.debug:
-        msg: "hi {{ num1}} is greater than 5"
-      when: num1 | int >5  
+   - name: checking wheater user exists or not
+     ansible.builtin.command: id expense
+     register: user
+     ignore_errors: yes
+
+   - name: printing user info
+     ansible.builtin.debug:
+       msg: "{{user}}"  
