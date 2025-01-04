@@ -2,8 +2,8 @@
   hosts: web
   tasks:
    - name: configuring names
-     ansible.builtin.debug:
-       msg: "{{item}}"
+     ansible.builtin.package:
+       name: {{item}}
+       state: present
      loop:
-      - naveen
-      - rajesh  
+      - nginx
