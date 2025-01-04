@@ -1,5 +1,6 @@
 - name: loops
   hosts: web
+  become: yes
   tasks:
    - name: configuring names
      ansible.builtin.package:
